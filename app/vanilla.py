@@ -1,3 +1,8 @@
+"""
+Generic implementation of CSP on asyncio.
+It has no any advantages since default loop and standard Queue are used.
+"""
+
 import asyncio
 
 c = asyncio.Queue(maxsize=1)  # no buffering

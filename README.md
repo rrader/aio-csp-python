@@ -10,7 +10,7 @@ they can be executed in separate python processes.
 1. Distributed scheduler should be implemented to coordinate
 1. The ability to execute clones of a single coroutine should be present
  (e.g. if the input queue is growing faster then coroutine reads from it).
-1. One loop should be "master-loop" that marks coroutines to execute on specific loop.
+1. One loop should be "master-loop" that marks coroutines to be executed on specific loop.
 1. For the sake of simplicity, initially just round-robin schedule policy should be implemented. 
 1. Fast IPC for loops synchronization is required.
 

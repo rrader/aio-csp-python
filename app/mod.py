@@ -1,4 +1,10 @@
+"""
+Implementation of CSP on asyncio using custom loop.
+"""
+
 import asyncio
+
+from csploop import CSPLoop
 
 c = asyncio.Queue(maxsize=1)  # no buffering
 
@@ -17,7 +23,7 @@ async def process(chan):
 
 
 if __name__ == '__main__':
-    loop = asyncio.BaseEventLoop()
+    loop = CSPLoop()
     asyncio.set_event_loop(loop)
 
     asyncio.ensure_future(generate(c))
