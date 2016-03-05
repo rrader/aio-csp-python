@@ -4,30 +4,20 @@ Implementation of CSP on asyncio using custom loop.
 
 import asyncio
 
-from csploop import CSPLoop
+from csploop import CSPMasterLoop
 
-c = asyncio.Queue(maxsize=1)  # no buffering
-
-
-async def generate(chan):
+async def test():
     i = 0
     while True:
-        await chan.put(i)
+        print(i)
         i += 1
 
 
-async def process(chan):
-    while True:
-        i = await chan.get()
-        print(i)
-
-
 if __name__ == '__main__':
-    loop = CSPLoop()
+    loop = CSPMasterLoop(slaves_num=1)
     asyncio.set_event_loop(loop)
 
-    asyncio.ensure_future(generate(c))
-    asyncio.ensure_future(process(c))
+    asyncio.ensure_future(loop.create_slave_task(test, slave_id=0))
 
     loop.run_forever()
     loop.close()

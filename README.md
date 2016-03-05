@@ -23,9 +23,9 @@ they can be executed in separate python processes.
 References
 ==================
 
-1. C.A.R. Hoare - Communicating Sequential Processes. [paper](http://spinroot.com/courses/summer/Papers/hoare_1978.pdf)
-
+1. C.A.R. Hoare - Communicating Sequential Processes.
+    [Paper](http://spinroot.com/courses/summer/Papers/hoare_1978.pdf).
 1. python-csp: implementation of CSP on threads/processes.
-    [Code](https://github.com/futurecore/python-csp), [Presentation](http://arild.github.io/csp-presentation/)
-  
-1. PyCSP: [paper](http://www.wotug.org/paperdb/send_file.php?num=216)
+    [Code](https://github.com/futurecore/python-csp), [presentation](http://arild.github.io/csp-presentation/).
+1. PyCSP: [paper](http://www.wotug.org/paperdb/send_file.php?num=216).
+1. aioprocessing - https://github.com/dano/aioprocessing
